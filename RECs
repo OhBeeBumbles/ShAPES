@@ -1,0 +1,15 @@
+// this runs once at the start
+void setup(){
+  size(1024, 1024);
+}
+
+// this runs once per freame after setup
+void draw(){
+  background(180);
+  
+  PVector anchorTL = new PVector(width*0.25, height*0.25);
+  PVector anchorBR = new PVector(width*0.75, height*0.75);
+  rectMode(CORNERS);
+  rect(anchorTL.x, anchorTL.y, anchorBR.x, anchorBR.y,);
+  line(anchorTL.x, anchorTL.y, anchorBR.x, anchorBR.y,);
+}
